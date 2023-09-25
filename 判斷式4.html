@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const lang = 'zh-tw'
+
+    // 從符合的 case 開始往下執行，直到遇到 break 停止
+    switch (lang) {
+      case 'zh-tw':
+        document.write('台灣中文')
+        break
+      case 'ja-jp':
+        document.write('日文')
+        break
+      case 'ko-kr':
+        document.write('韓文')
+        break
+      case 'en':
+      case 'en-us':
+        document.write('英文')
+        break
+      // 以上皆非時用 default
+      default:
+        document.write('窩不知道 peko')
+        break
+    }
+
+    if (lang === 'zh-tw') {
+      document.write('台灣中文')
+    } else if (lang === 'ja-jp') {
+      document.write('日文')
+    } else if (lang === 'ko-kr') {
+      document.write('韓文')
+    } else if (lang === 'en' || lang === 'en-us') {
+      document.write('英文')
+    } else {
+      document.write('窩不知道 peko')
+    }
+
+    const message = 
+      lang === 'zh-tw'
+      ? '台灣中文'
+      : lang === 'ja-jp'
+      ? '日文'
+      : lang === 'ko-kr'
+      ? '韓文'
+      : lang === 'en' || lang === 'en-us'
+      ? '英文'
+      : '窩不知道 peko';
+    document.write(message)
+  </script>
+</body>
+</html>
