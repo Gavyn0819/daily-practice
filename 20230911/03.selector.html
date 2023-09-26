@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+      - 以 . 開頭
+      - 只允許使用英文、數字、連字號 -、底線 _
+      - 必須字元開始，不能數字開頭， .1abc(不行)
+      - 可以使用中文命名，但不要這樣做
+      - 有區分大小寫  
+    */
+    .color {
+      color: blue;
+    }
+
+    li {
+      color: green;
+    }
+
+    .active {
+      color: darkmagenta;
+    }
+
+    .font {
+      font-size: 30px;
+    }
+
+    #header {
+      color: lightcoral;
+    }
+
+    #main {
+      color: lightgreen;
+    }
+
+    #sidebar {
+      color: lightblue;
+    }
+
+    #footer {
+      color: lawngreen;
+    }
+
+    #header,
+    #main,
+    #sidebar,
+    #footer {
+      font-size: 30px;
+    }
+
+    /* 後代選擇器為半形空白，選擇到兒子與孫子們 */
+    /* nav p {
+      color: blue;
+    } */
+
+    /* 子代選擇器為 >，只選擇到兒子 */
+    nav>p {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS 選擇器</h1>
+  <h1 class="color">class 選擇器</h1>
+  <h2>使用場景</h2>
+  <h3>1.相同元素但需要不同外觀時</h3>
+  <ul>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li class="active">Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+  </ul>
+  <h3>2.重複使用時</h3>
+  <p>Lorem ipsum dolor <a class="font" href="#">藍色星期一</a> adipisicing elit. Dolore architecto voluptatem error ratione
+    numquam
+    expedita assumenda, <em class="font">fugiat temporibus</em> ab magnam eligendi <b class="font">molestiae quis</b>.
+    Nisi veritatis eius sit numquam eos
+    ducimus!</p>
+
+  <hr>
+
+  <h1>id 選擇器</h1>
+  <ul>
+    <li>一份文件裡面，只允許一個獨一無二的 id 名稱，就像身分證不能重複</li>
+    <li>對程式來說，id 是最簡單、最快速、最直接的選擇方式，DOM</li>
+  </ul>
+
+  <h2>網頁區塊的名稱會以 id 來命名</h2>
+  <div id="header">這是 header 區塊</div>
+  <div id="main">這是 main 區塊</div>
+  <div id="sidebar">這是 sidebar 區塊</div>
+  <div id="footer">這是 footer 區塊</div>
+
+  <hr>
+
+  <h1>後代選擇器與子代選擇器</h1>
+  <nav>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+  </nav>
+</body>
+
+</html>
